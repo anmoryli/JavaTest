@@ -1,0 +1,15 @@
+# spring.application.name=config
+
+spring:
+  application:
+    name: config
+
+my:
+  key1: hello
+  key2: 100
+
+person:
+  id: 1
+  name: huanhuan
+  age: 30
+

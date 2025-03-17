@@ -1,0 +1,2 @@
+def str():
+    return "hello"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2025-2-15.iml" filepath="$PROJECT_DIR$/2025-2-15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArrayList/ArrayList.iml" filepath="$PROJECT_DIR$/ArrayList/ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bean/Bean.iml" filepath="$PROJECT_DIR$/Bean/Bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChangableArgs/ChangableArgs.iml" filepath="$PROJECT_DIR$/ChangableArgs/ChangableArgs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cite/Cite.iml" filepath="$PROJECT_DIR$/Cite/Cite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Class/Class.iml" filepath="$PROJECT_DIR$/Class/Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Debug/Debug.iml" filepath="$PROJECT_DIR$/Debug/Debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Method/Method.iml" filepath="$PROJECT_DIR$/Method/Method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RandomNum/RandomNum.iml" filepath="$PROJECT_DIR$/RandomNum/RandomNum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Scanner/Scanner.iml" filepath="$PROJECT_DIR$/Scanner/Scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Static/Static.iml" filepath="$PROJECT_DIR$/Static/Static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringConcat/StringConcat.iml" filepath="$PROJECT_DIR$/StringConcat/StringConcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StuManagement/StuManagement.iml" filepath="$PROJECT_DIR$/StuManagement/StuManagement.iml" />
+    </modules>
+  </component>
+</project>
