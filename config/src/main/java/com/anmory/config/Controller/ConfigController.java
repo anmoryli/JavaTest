@@ -1,6 +1,7 @@
 package com.anmory.config.Controller;
 
 import com.anmory.config.Model.Person;
+import com.anmory.config.Model.DbTypes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,10 +25,13 @@ public class ConfigController {
 
     @Autowired
     Person person;
+    @Autowired
+    DbTypes dbTypes;
     @RequestMapping("/config")
     public void config() {
         System.out.println("mykey1:" + mykey1);
         System.out.println("mykey2:" + mykey2);
         System.out.println("person: " + person);
+        System.out.println("dbTypes: " + dbTypes);
     }
 }

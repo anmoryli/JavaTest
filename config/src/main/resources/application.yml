@@ -13,3 +13,13 @@ person:
   name: huanhuan
   age: 30
 
+dbtypes:
+  name:
+    - mysql
+    - huanhuan
+    - love
+  map:
+    k1: kk1
+    k2: kk2
+    k3: kk3
+
