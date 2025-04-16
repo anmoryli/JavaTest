@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-ai
+  ai:
+    openai:
+      api-key: sk-defa3605b5a347c68c684dc2ae4d1263
+      chat:
+        model: qwen-max
+
