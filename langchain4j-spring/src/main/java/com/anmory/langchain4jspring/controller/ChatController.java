@@ -59,4 +59,20 @@ public class ChatController {
                     .start();
         });
     }
+
+    @Autowired
+    CommonConfiguration.AssistantUnique assistantUnique;
+    @RequestMapping(value = "/memory_unique_stream", produces = "text/stream;charset=utf-8")
+    public Flux<String> memoryUniqueStream(Integer memoryId,@RequestParam(defaultValue = "你是谁") String question) {
+        TokenStream stream = assistantUnique.stream(memoryId,question);
+
+        return Flux.create(sink-> {
+            stream.onPartialResponse(
+                            sink::next
+            )
+                    .onCompleteResponse(c -> sink.complete())
+                    .onError(sink::error)
+                    .start();
+        });
+    }
 }

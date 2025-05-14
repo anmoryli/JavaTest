@@ -1,0 +1,20 @@
+@startuml
+class Emperor {
+    - Emperor emperor
+    + Emperor getInstance()
+    + say()
+}
+
+class Minister {
+    - String name
+    + Minister()
+    + setName(String name)
+    + getName()
+}
+
+Emperor o-- Emperor: 聚合
+
+class Client {
+    + main()
+}
+@enduml

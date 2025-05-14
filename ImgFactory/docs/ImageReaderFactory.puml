@@ -1,0 +1,49 @@
+@startuml
+package "com.anmory" {
+
+  ' 抽象类
+  abstract class ImageReader {
+    +readImg() {abstract}
+  }
+
+  abstract class ImageReaderFactory {
+    +getImageReader() : ImageReader {abstract}
+  }
+
+  ' 具体类
+  class JpgReader {
+    +readImg()
+  }
+
+  class GifReader {
+    +readImg()
+  }
+
+  class JpgReaderFactory {
+    +getImageReader() : ImageReader
+  }
+
+  class GifReaderFactory {
+    +getImageReader() : ImageReader
+  }
+
+  class Client {
+    +main(args: String[])
+  }
+
+  ' 继承关系
+  ImageReader <|-- JpgReader
+  ImageReader <|-- GifReader
+  ImageReaderFactory <|-- JpgReaderFactory
+  ImageReaderFactory <|-- GifReaderFactory
+
+  ' 依赖关系
+  Client ..> ImageReaderFactory : uses
+  Client ..> ImageReader : uses
+  JpgReaderFactory ..> JpgReader : creates
+  GifReaderFactory ..> GifReader : creates
+
+}
+
+@enduml
+\\

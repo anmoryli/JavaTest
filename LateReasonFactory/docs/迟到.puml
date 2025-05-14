@@ -1,0 +1,44 @@
+@startuml
+abstract class LateReasonFactory {
+    LateReason getLateReason();
+}
+
+abstract class LateReason {
+    void getLateReason();
+}
+
+class GoHomeReasonFactory extends LateReasonFactory{
+    LateReason getLateReason();
+}
+
+class ToiletReasonFactory  extends LateReasonFactory{
+    LateReason getLateReason();
+}
+
+class OnWayReasonFactory extends LateReasonFactory{
+    LateReason getLateReason();
+}
+
+class GoHomeReason extends LateReason{
+    void getLateReason();
+}
+
+class ToiletReason extends LateReason{
+    void getLateReason();
+}
+
+class OnWayReason extends LateReason{
+    void getLateReason();
+}
+
+class Client {
+    LateReasonFactory  lateReasonFactory;
+}
+
+Client ..> LateReasonFactory:uses
+Client ..> LateReason:uses
+
+GoHomeReasonFactory ..> GoHomeReason:creates
+ToiletReasonFactory ..> ToiletReason:creates
+OnWayReasonFactory ..> OnWayReason:creates
+@enduml

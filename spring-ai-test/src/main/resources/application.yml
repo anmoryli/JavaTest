@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-ai-test
+  ai:
+    openai:
+      api-key: sk-hrKgm7Q2JhtPgTeoPaY9A83zOxhl0KKWXD0KTc73ru3M6zh8
+      base-url: https://hk.xty.app
+#      chat:
+#        options:
+#          model: claude-3-5-sonnet
+

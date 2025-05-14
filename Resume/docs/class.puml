@@ -1,0 +1,45 @@
+@startuml
+abstract class Resume {
+    + String getName();
+    + String getDescription();
+}
+
+class BasicResume extends Resume{
+    - String name;
+    + BasicResume(String name)
+    + String getName()
+    + String getDescription()
+}
+
+abstract class Decorator extends Resume {
+    - Resume resume;
+
+    + Decorator(Resume resume)
+
+    + Resume getResume()
+}
+
+Decorator o--  Resume
+
+class SexResume extends Decorator{
+    + SexResume(Resume resume,String sex)
+
+    - String sex;
+
+    + String getName()
+
+    + String getDescription()
+}
+
+class WorkexperienceResume extends Decorator{
+    + WorkexperienceResume(Resume resume,String workexperience)
+
+    - String workexperience;
+
+    + String getName()
+
+    + String getDescription()
+}
+
+
+@enduml

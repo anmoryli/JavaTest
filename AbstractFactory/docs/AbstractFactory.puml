@@ -1,0 +1,47 @@
+@startuml
+abstract class Button {
+    + abstract void click();
+}
+
+class WindowsButton extends Button{
+    + void click()
+}
+
+class LinuxButton extends Button{
+    + void click()
+}
+
+abstract class TextInput {
+    + abstract void render();
+}
+
+class WindowsTextInput extends TextInput{
+    + void render()
+}
+
+class LinuxTextInput extends TextInput{
+    + void render()
+}
+
+abstract class ComponentFactory {
+    + abstract TextInput createTextInput();
+    + abstract Button createButton();
+}
+
+class WindowsComponentFactory extends ComponentFactory{
+    + TextInput createTextInput()
+    + Button createButton()
+}
+
+class LinuxComponentFactory extends ComponentFactory{
+    + TextInput createTextInput()
+    + Button createButton()
+}
+
+class Client{
+    + void main()
+}
+Client --> ComponentFactory
+Client  --> Button
+Client --> TextInput
+@enduml

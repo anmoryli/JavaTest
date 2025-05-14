@@ -4,7 +4,9 @@ import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.service.AiServices;
+import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.TokenStream;
+import dev.langchain4j.service.UserMessage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -31,5 +33,20 @@ public class CommonConfiguration {
                 .streamingChatLanguageModel(qwenStreamingChatModel)
                 .chatMemory(chatMemory)
                 .build();
+    }
+
+    public interface AssistantUnique {
+        String chat(String question);
+        TokenStream stream(@MemoryId int memoryId,@UserMessage String question);
+    }
+
+    @Bean
+    public AssistantUnique assistantUnique(StreamingChatLanguageModel qwenStreamingChatModel) {
+        AssistantUnique assistantUnique = AiServices.builder(AssistantUnique.class)
+                .streamingChatLanguageModel(qwenStreamingChatModel)
+                .chatMemoryProvider(memoryId ->
+                        MessageWindowChatMemory.builder().maxMessages(1000).id(memoryId).build())
+                .build();
+        return assistantUnique;
     }
 }
